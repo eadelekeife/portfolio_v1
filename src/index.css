@@ -1,13 +1,342 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* general */
+@font-face {
+    font-family: 'Mark Medium';
+    src: url('./assets/fonts/ff-mark/FontFont_FF.Mark.Pro.Medium.otf');
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+    --yellow: #D4B134;
+}
+
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+body, html {
+    background: #111111;
+    min-height: 100vh;
+    color: #aaaaaa;
+    font-family: 'Mark Medium';
+    padding: 10px 40px;
+}
+
+.grid_3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 15px;
+}
+
+.grid_2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 15px;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #000000;
+    padding: 20px 25px;
+    border-radius: 4px;
+    position: fixed;
+    width: 100%;
+    top: 0%;
+    left: 0%;
+    z-index: 10;
+}
+
+.nav ion-icon {
+    color: blue;
+    --ionicon-stroke-width: 16px;
+    --ionicon-stroke-color: #fff;
+}
+
+.nav img {
+    height: 2rem;
+    cursor: pointer;
+    margin-right: 50px;
+}
+
+.nav ul li {
+    display: inline-block;
+}
+
+.nav ul li a {
+    margin-right: 20px;
+    color: #aaaaaa;
+    text-decoration: none;
+}
+
+.nav ul li:last-child {
+    background: var(--yellow);
+    padding: 15px 25px;
+    border-radius: 4px;
+    color: #000000;
+}
+
+.header {
+    min-height: 95vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.header button {
+    background: var(--yellow);
+    padding: 15px 35px;
+    border-radius: 4px;
+    font-size: .9rem;
+    font-family: 'Mark Medium';
+}
+
+.header h1 {
+    margin-bottom: 20px;
+    font-size: 3rem;
+}
+
+.header p {
+    width: 60%;
+    line-height: 1.8;
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.header h3 {
+    padding-top: 8%;
+    margin-bottom: 30px;
+}
+
+.hand {
+    position: absolute;
+    top: 20%;
+    right: -80px;
+}
+
+.hand img {
+    width: auto;
+    height: 20rem;
+}
+
+svg.myName {
+    font: bold 2.5rem Century Gothic, Arial;
+    width: 100%;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+text.authorText {
+    fill: none;
+    stroke: #fff;
+    stroke-width: .5px;
+    stroke-linejoin: round;
+    animation: 2s pulsate infinite;
+}
+
+.about_me p {
+    line-height: 1.7;
+}
+
+.about_me p.space_under {
+    margin-bottom: 20px;
+}
+
+.about_me ul {
+    display: flex;
+    align-items: center;
+}
+
+.about_me ul span {
+    flex: 1;
+}
+
+.about_me ul li {
+    line-height: 1.7;
+}
+
+.about_me img {
+    width: 60%;
+    height: auto;
+    margin: 0% auto;
+    display: block;
+    position: relative;
+}
+
+.portfolio_sect p {
+    margin-bottom: 20px;
+    line-height: 1.8;
+    font-size: .9rem;
+}
+
+.portfolio_sect ul li {
+    display: inline-block;
+    font-size: 0.8rem;
+    padding-right: 10px;
+}
+
+.portfolio_sect h5 {
+    font-size: 1rem;
+}
+
+.grid_flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.grid_flex div {
+    display: flex;
+    grid-gap: 10px;
+}
+
+.grid_flex ion-icon, .stories ion-icon {
+    font-size: 20px;
+}
+
+.contact ion-icon {
+    font-size: 30px;
+}
+
+.stories ion-icon {
+    margin-bottom: 10px;
+}
+
+.stories h5 {
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.stories.portfolio_sect p {
+    margin-bottom: 10px;
+}
+
+.data_block {
+    background: #1B1B1D;
+    padding: 15px 20px;
+    padding-top: 30px;
+    border-radius: 3px;
+}
+
+.space_to_top {
+    margin-top: 10%;
+}
+
+.small_space_to_top {
+    margin-top: 5%;
+}
+
+.contact_display {
+    border: 2px solid #1B1B1D;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 15px;
+    border-bottom-color: var(--yellow);
+}
+
+.contact_display h3 {
+    font-size: .8rem;
+    color: #fff;
+}
+
+.footer {
+    margin-top: 8%;
+    border-top: 2px solid #1B1B1D;
+    padding-top: 2%;
+}
+
+.footer .grid_2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer .grid_2 a {
+    display: block;
+    color: #aaaaaa;
+    margin-bottom: 10px;
+}
+
+svg.section_header text {
+    fill: none;
+    stroke: #fff;
+    stroke-width: .5px;
+    stroke-linejoin: round;
+    font-size: 1.3rem;
+}
+
+svg.section_header {
+    font: bold 30px Century Gothic, Arial;
+    width: 100%;
+    height: 50px;
+}
+
+@keyframes pulsate {
+    50% {
+        stroke-width: 2.5px
+    }
+}
+
+
+.nav_data {
+    background: #cb450c;
+    background: #111111;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0%;
+    left: 0px;
+    z-index: 20;
+    padding-left: 30px;
+    padding-top: 50px;
+}
+
+.nav_data.showNav {
+    display: block;
+}
+
+.nav_data.hideNav {
+    display: none;
+}
+
+.nav_data ul li {
+    list-style: none;
+}
+
+svg.nav_data_content text {
+    fill: none;
+    stroke: #fff;
+    stroke-width: .5px;
+    stroke-linejoin: round;
+    font-size: 2rem;
+}
+
+svg.nav_data_content {
+    font: bold 30px Century Gothic, Arial;
+    width: 100%;
+    height: 80px;
+}
+
+.nav_data a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 30px;
+    font-size: 1.3rem;
+}
+
+.nav_data .nav_links {
+    margin-top: 10%;
+}
+
+.closeNav {
+    position: absolute;
+    top: 5%;
+    right: 10%;
+    background: var(--yellow);
+    height: 3rem;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
 }
