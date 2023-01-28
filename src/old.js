@@ -263,13 +263,41 @@ const Homepage = () => {
                 <div className="padding-block">
                     <div className="header first_display">
                         <div>
+                            <div className="desktop-only">
+                                <div className="header-content">
+                                    <img src={Me} alt="me" className="me" />
+                                    <div className="desktop-only">
+                                        <h3 className="single">Hello there, my name is</h3>
+                                    </div>
+                                    <div className="mobile-only">
+                                        <svg className="section_header">
+                                            <text y="40">Hello there, my name is</text>
+                                        </svg>
+                                    </div>
+                                    <div className="desktop-only">
+                                        <svg className="myName">
+                                            <text className="authorText" y="40">Adeleke Ifeoluwase.</text>
+                                        </svg>
+                                    </div>
+                                    <div className="mobile-only">
+                                        <h2>Adeleke Ifeoluwase Ebenezer.</h2>
+                                    </div>
+                                    <p>I’m a software engineer specializing in building (and occasionally designing) exceptional
+                                        digital experiences. Currently, I’m focused on building accessible, human-centered products at
+                                        Upstatement.</p>
+                                    <button
+                                        onClick={onButtonClick}
+                                    >Download my resume</button>
+                                </div>
+                            </div>
                             <div className="dev-page">
                                 {/* <img src={Me} alt="me" className="me" /> */}
                                 <h1>Full-Stack Web Developer</h1>
                                 <div className="line"></div>
                                 <h1>Adeleke Ifeoluwase</h1>
-                                <p>I am a full-stack website developer with over 2 years work experience able to build responsive web
-                                    applications from the ground up. In my free time, I write technical articles on different programming topics on Medium.
+                                <p>I am a full stack website developer with 2 years work experience able to build responsive web
+                                    applications from the ground up. I love to work on exceptional human-centered products that impact 
+                                    meaningfully. In my free time, I write technical articles on different programming topics on Medium.
                                 </p>
                                 <button
                                     onClick={onButtonClick}

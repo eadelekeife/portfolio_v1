@@ -494,6 +494,21 @@ svg.nav_data_content {
     display: block;
 }
 
+.line {
+    border-bottom: 1px solid #fff;
+    margin: 10px 0px;
+    display: block;
+}
+
+.dev-page h1 {
+    text-transform: uppercase;
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: -1px;
+    margin-bottom: 0%;
+    line-height: 1;
+    font-size: 4.5rem;
+}
+
 @media screen and (min-width: 720px) {
     svg.section_header {
         margin-bottom: 10px;
