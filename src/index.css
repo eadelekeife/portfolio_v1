@@ -5,11 +5,6 @@
 }
 
 @font-face {
-    font-family: 'Century Gothic';
-    src: url('./assets/fonts/century-gothic/Century\ Gothic.ttf');
-}
-
-@font-face {
     font-family: 'Avenir';
     src: url('./assets/fonts/AvenirLTStd-Heavy.otf');
 }
@@ -228,9 +223,9 @@ text.authorText {
 }
 
 .portfolio_sect p {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     line-height: 1.8;
-    font-size: .9rem;
+    font-size: .85rem;
 }
 
 .portfolio_sect ul li {
@@ -287,15 +282,6 @@ text.authorText {
 .data_block:hover {
     /* cursor: url('./assets/images/project.webp'); */
 }
-
-/* .data_block:hover {
-    position: relative;
-    z-index: 10;
-} */
-
-/* .data_block:hover::after {
-    border: 2px solid #fff;
-} */
 
 .data-block-content {
     width: 100%;
@@ -404,16 +390,66 @@ svg.section_header {
 
 .nav_data {
     background: #cb450c;
-    background: #111111;
     position: fixed;
     height: 100%;
     width: 100%;
     top: 0%;
     left: 0px;
-    z-index: 20;
     padding-left: 30px;
     padding-top: 50px;
     z-index: 1000;
+}
+
+/* .nav_data .color-cover {
+    background: #cb450c;
+    z-index: 100;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0%;
+    left: 0px;
+} */
+
+.nav_data ul, .nav_data.showNav .nav_links, .closeNav {
+    z-index: 1000;
+}
+
+.nav_data ul {
+    width: 100%;
+}
+
+.block-box {
+    position: fixed;
+    background: #cb450c;
+    background: #111111;
+    height: 100%;
+    top: 0%;
+    left: 0px;
+}
+
+.block-box.block1 {
+    width: 20%;
+    left: 20%;
+}
+
+.block-box.block2 {
+    width: 20%;
+    left: 40%;
+}
+
+.block-box.block3 {
+    width: 20%;
+    left: 60%;
+}
+
+.block-box.block4 {
+    width: 20%;
+    left: 80%;
+}
+
+.block-box.block5 {
+    width: 20%;
+    left: 0%;
 }
 
 .nav_data.showNav {
@@ -470,15 +506,32 @@ svg.nav_data_content {
 } */
 .greeting {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
+    bottom: 10%;
+    left: 0%;
     width: 100%;
 }
 
 .greeting h2 {
     margin: 0%;
+    font-size: 12rem;
+    margin-bottom: 0px;
+    margin-left: 0%;
+    font-family: 'Bebas Neue', cursive;
+    line-height: 1;
+}
+
+.level-loader {
+    background: #aaaaaa;
+    width: 100%;
+    display: block;
+    height: 1rem;
+    border: 1.5px solid #aaaaaa;
+}
+
+.level-loader-counter {
+    display: block;
+    height: .8rem;
+    background: #111111;
 }
 
 .mobile-only {
@@ -495,8 +548,12 @@ svg.nav_data_content {
 }
 
 .line {
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid #aaaaaa;
     margin: 10px 0px;
+    display: block;
+}
+
+.dev-page {
     display: block;
 }
 
@@ -506,12 +563,65 @@ svg.nav_data_content {
     letter-spacing: -1px;
     margin-bottom: 0%;
     line-height: 1;
-    font-size: 4.5rem;
+    font-size: 6rem;
+    opacity: 1;
+}
+
+.nav h3 {
+    font-family: 'Bebas Neue', cursive;
+}
+
+.data_block_header {
+    background: #e7e7e7;
+    height: 13rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.data_block_header img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+.website_data_block .data-block_body {
+    background: transparent;
+    border: 2px solid #1B1B1D;
+    border-top-width: 1px;
+    padding: 10px;
+    padding-bottom: 0px;
+    border-radius: 4px;
+}
+
+.website_data_block .data-block_body h5 {
+    margin-bottom: 0px;
+}
+
+.website_data_block .data-block_body ul li {
+    font-size: .8rem;
 }
 
 @media screen and (min-width: 720px) {
     svg.section_header {
         margin-bottom: 10px;
+    }
+
+    .nav_data.showNav .nav_links {
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+    }
+
+    .nav_data.showNav {
+        padding-left: 2%;
+        display: flex;
+        padding-top: 0px;
+        align-items: center;
+        width: 100%;
+        height: 100%;
     }
 }
 
@@ -571,13 +681,11 @@ svg.nav_data_content {
     } */
 
     .header svg {
-        font: bold 2rem Century Gothic, Arial;
         font: normal 2rem 'Avenir';
         /* font: bold 2rem 'Mark Medium'; */
     }
 
     .header h2 {
-        font: normal 2rem 'Avenir';
         font: normal 2rem 'Gilroy';
         color: #fff;
         margin-top: 10px;
@@ -612,9 +720,13 @@ svg.nav_data_content {
 
     .footer-cover.space_to_top .second_display .mobile-only {
         display: flex;
-        text-align: center;
+        /* text-align: center; */
         grid-gap: 30px;
         margin-top: 30px;
+    }
+
+    .footer-cover.space_to_top a ion-icon {
+        color: #aaaaaa;
     }
 
     .footer-cover.space_to_top .footer .grid_2 {
@@ -771,6 +883,19 @@ svg.nav_data_content {
     .footer-cover.space_to_top p {
         line-height: 1.9;
     }
+
+    .dev-page h1 {
+        text-transform: uppercase;
+        font-family: 'Bebas Neue', cursive;
+        letter-spacing: -1px;
+        margin-bottom: 0%;
+        line-height: 1;
+        font-size: 4.5rem;
+    }
+
+    .dev-greeting {
+        margin-bottom: 10px;
+    }
 }
 
 .projects-mobile-display .grid_2 {
@@ -842,13 +967,14 @@ svg.nav_data_content {
     position: fixed;
     height: 100%;
     width: 100%;
-    min-width: 100vw;
+    min-width: 110vw;
+    margin-left: -5vw;
     z-index: 1000;
     background: #000000;
     background: #111111;
     /* border-bottom: 1px solid #fff; */
     box-shadow: 0px 0px 3px 1px rgba(254, 237, 202, .5);
-    border-radius: 0px 0px 40px 40px;
+    border-radius: 0px 0px 80px 80px;
 }
 
 .last-greeting {
