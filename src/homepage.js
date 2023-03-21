@@ -332,11 +332,11 @@ const Homepage = () => {
                                     <div className="dev-page">
                                         {/* <img src={Me} alt="me" className="me" /> */}
                                         <div className="dev-greeting">
-                                            <h1 className="first">Full-Stack Web Developer</h1>
+                                            <h1 className="first">Full-Stack Engineer</h1>
                                             <div className="line"></div>
                                             <h1 className="second">Adeleke Ifeoluwase</h1>
                                         </div>
-                                        <p>I am a full-stack website developer with over 2 years work experience able to build responsive web
+                                        <p>I am a full-stack engineer with over 2 years work experience able to build responsive web
                                             applications from the ground up. In my free time, I write technical articles on different programming topics on Medium.
                                         </p>
                                         <button
@@ -369,8 +369,8 @@ const Homepage = () => {
                                         <div className="grid_2">
                                             <div>
                                                 <div>
-                                                    <p className="space_under">Hi there! My name is Adeleke Ifeoluwase Ebenezer. I am a junior fullstack web
-                                                        developer from Lagos, Nigeria. The idea that I could sit behind a computer and create something
+                                                    <p className="space_under">Hi there! My name is Adeleke Ifeoluwase Ebenezer. I am a full-stack engineer
+                                                        from Lagos, Nigeria. The idea that I could sit behind a computer and create something
                                                         that can impact millions of people endeared me to this field. I enjoy building apps that
                                                         not only work well but also look good.</p>
                                                     <p className="space_under">
