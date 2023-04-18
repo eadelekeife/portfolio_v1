@@ -279,7 +279,7 @@ const Homepage = () => {
 
     const onButtonClick = () => {
         // using Java Script method to get PDF file
-        fetch('resume.pdf').then(response => {
+        fetch('Ifeoluwase_Adeleke-software_developer.pdf').then(response => {
             response.blob().then(blob => {
                 // Creating new object of PDF file
                 const fileURL = window.URL.createObjectURL(blob);
@@ -336,7 +336,7 @@ const Homepage = () => {
                                             <div className="line"></div>
                                             <h1 className="second">Adeleke Ifeoluwase</h1>
                                         </div>
-                                        <p>I am a full-stack engineer with over 2 years work experience able to build responsive web
+                                        <p>I am a full-stack engineer with about 3 years work experience able to build responsive and scalable web
                                             applications from the ground up. In my free time, I write technical articles on different programming topics on Medium.
                                         </p>
                                         <button
@@ -383,13 +383,13 @@ const Homepage = () => {
                                                     <ul>
                                                         <span>
                                                             <li>Vanilla JavaScript</li>
+                                                            <li>Typescript</li>
                                                             <li>React.js</li>
-                                                            <li>Nodejs</li>
                                                         </span>
                                                         <span>
-                                                            <li>EJS</li>
+                                                            <li>Nodejs</li>
+                                                            <li>NextJs</li>
                                                             <li>Express.js</li>
-                                                            <li>Typescript</li>
                                                         </span>
                                                     </ul>
                                                 </div>
